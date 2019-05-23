@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import CardDisplay from "./CardDisplay";
 import "./App.css";
@@ -22,7 +23,7 @@ class App extends Component {
 
   //createCard function needs to be in the parent component so that 
   createCard(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     this.setState({
       chihuahuas: [
@@ -37,7 +38,7 @@ class App extends Component {
   }
 
   //change handlers for the inputs in the form need to be in the parent component because we need the input data to enter into chihuahuas
-  
+
   handleName(val) {
     this.setState({ nameInput: val });
   }
@@ -49,7 +50,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.nameInput)
     return (
       <div className='App'>
         <NavBar />
@@ -57,9 +57,11 @@ class App extends Component {
           handleName={this.handleName}
           handleImage={this.handleImage}
           handleDescription={this.handleDescription}
-          createCard={e=>this.createCard(e)}
+          createCard={e => this.createCard(e)}
         />
-        <CardDisplay chihuahuas={this.state.chihuahuas} />
+        <div className= 'card-container'>
+        <CardDisplay  chihuahuas={this.state.chihuahuas} />
+        </div>
       </div>
     );
   }

@@ -45,7 +45,7 @@
   margin: 0px;
 }
 
-/* form component */
+/* //////////////Form Component////////////// */
 
 .form-component {
   display: flex;
@@ -85,6 +85,9 @@ h3 {
   font-family: "Roboto Slab", serif;
 }
 
+
+
+/* //////////////Index.js////////////// */
 
 body {
   margin: 0;
